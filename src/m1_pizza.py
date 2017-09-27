@@ -31,7 +31,7 @@ def main():
     run_test_draw_points_on_circle()
     run_test_pizza()
     run_test_polygon()
-    # run_test_fancy_polygon()
+    run_test_fancy_polygon()
 
 
 def run_test_generate_points_on_circle():
@@ -589,7 +589,10 @@ def fancy_polygon(window, circle, number_of_lines, hops_to_next_point, color, th
     #       appropriately.  ASK YOUR INSTRUCTOR FOR AN EXAMPLE.
     ####################################################################
     # ------------------------------------------------------------------
-    
+    circle.attach_to(window)
+
+
+
 
 
 # ----------------------------------------------------------------------
