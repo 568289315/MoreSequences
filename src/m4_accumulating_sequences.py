@@ -277,6 +277,10 @@ def draw_shapes(shapes, window):
     # ------------------------------------------------------------------
 
 
+
+
+
+
 def run_test_rectangles_from_circles():
     """ Tests the   rectangles_from_circles    function. """
     print()
