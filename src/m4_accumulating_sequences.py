@@ -264,7 +264,7 @@ def draw_shapes(shapes, window):
       :type window:  rg.RoseWindow
     """
     # ------------------------------------------------------------------
-    # TODO: 8. Implement and test this function.
+    # DONE: 8. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     ####################################################################
@@ -275,6 +275,9 @@ def draw_shapes(shapes, window):
     # FWIW: The word for ideas like this is "polymorphism".
     ####################################################################
     # ------------------------------------------------------------------
+    for k in range(len(shapes)):
+        shapes[k].attach_to(window)
+        window.render(0.3)
 
 
 
@@ -380,7 +383,7 @@ def rectangles_from_circles(circles):
       :type circles:  list[rg.Circle]    or tuple(rg.Circle)
     """
     # ------------------------------------------------------------------
-    # TODO: 9. Implement and test this function.
+    # DONE: 9. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     ####################################################################
@@ -391,6 +394,19 @@ def rectangles_from_circles(circles):
     #            in this function, so DON'T draw anything in here!
     ####################################################################
     # ------------------------------------------------------------------
+    recc = []
+    for k in range(len(circles)):
+        center = circles[k].center
+        r = circles[k].radius
+        c1 = rg.Point(center.x-r,center.y-r)
+        c2 = rg.Point(center.x+r,center.y+r)
+        rec = rg.Rectangle(c1,c2)
+        recc = recc+[rec]
+    return recc
+
+
+
+
 
 
 # ----------------------------------------------------------------------
